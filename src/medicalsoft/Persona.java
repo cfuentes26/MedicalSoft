@@ -5,6 +5,11 @@
  */
 package medicalsoft;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+
 /**
  *
  * @author estudiante
@@ -97,4 +102,20 @@ public class Persona {
         this.celular = celular;
     }
     
+public int getEdad(){
+ DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+LocalDate fechaNac = LocalDate.parse(this.fecha_nacimiento, fmt);
+LocalDate ahora = LocalDate.now();
+
+Period periodo = Period.between(fechaNac, ahora);
+
+        return periodo.getYears();
+}
+public boolean validateEmail(){
+    return true;
+    
+}
+    public String getFullname(){
+        return this.nombre+" "+this.apellidos;
+    }
 }
