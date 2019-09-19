@@ -5,6 +5,8 @@
  */
 package medicalsoft;
 
+import static medicalsoft.Validacion.validateEmail;
+
 /**
  *
  * @author estudiante
@@ -16,13 +18,13 @@ public class MedicalSoft {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-       Validacion v = new Validacion();
+
        Medico medico1 = new Medico("","");
        medico1.setNombre("Omar");
        medico1.setApellidos("Marenco");
        medico1.setFecha_nacimiento("22/02/1981");
         medico1.setEmail("carlosand1999/gmail.com");
-        System.out.println(" el medico es: " + medico1.getFullname()+ " y su edad es " + medico1.getEdad() + " y su email es "+ v.validateEmail("carlosand1999@gmail.com"));
+        System.out.println(" el medico es: " + medico1.getFullname()+ " y su edad es " + medico1.getEdad() + " y su email es "+ validateEmail("carlosand1999@gmail.com"));
        
        
        

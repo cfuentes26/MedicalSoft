@@ -12,9 +12,9 @@ import java.util.regex.Pattern;
  *
  * @author estudiante
  */
-public class Validacion {
+public  class Validacion {
     
-    public boolean validateEmail(String email){
+    public static boolean validateEmail(String email){
      // Patrón para validar el email
         Pattern pattern = Pattern
                 .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
@@ -24,7 +24,7 @@ public class Validacion {
         Matcher mather = pattern.matcher(email);
  
         if (mather.find() == true) {
-            System.out.println("El email ingresado es válido.");
+            System.out.println("El email ingresado es válido." );
         } else {
             System.out.println("El email ingresado es inválido.");
         }
@@ -32,7 +32,7 @@ public class Validacion {
         return mather.matches();
     
 }
-    public boolean validatePhone(){
+    public static boolean validatePhone(){
         return true;
     }
 }
