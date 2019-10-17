@@ -113,6 +113,7 @@ public class Persona {
         Period periodo = Period.between(fechaNac, ahora);
 
         return periodo.getYears();
+
     }
 
     public boolean validateEmail(String email) {
@@ -122,5 +123,8 @@ public class Persona {
 
     public String getFullname() {
         return this.nombre + " " + this.apellidos;
-    }
+
+}
+
+    
 }

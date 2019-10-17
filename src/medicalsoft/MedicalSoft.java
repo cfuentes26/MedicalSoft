@@ -17,6 +17,7 @@ public class MedicalSoft {
     public static void main(String[] args) {
         // TODO code application logic here
 
+
         Medico medico1 = new Medico("", "");
         medico1.setNombre("Carlos");
         medico1.setApellidos("Fuentes");
@@ -26,6 +27,12 @@ public class MedicalSoft {
         Vista_Formulario form = new Vista_Formulario();
         form.setVisible(true);
         
+
+      
+       
+       
+
+
     }
     
 }

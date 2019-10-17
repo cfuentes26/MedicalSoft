@@ -53,7 +53,7 @@ public class Vista_Formulario extends JFrame {
 
     /**
      *
-     * Inicializa la ventana
+     * Inicializa la ventanagit 
      *
      */
     public void onIntit() {
