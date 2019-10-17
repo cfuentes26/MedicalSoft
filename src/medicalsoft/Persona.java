@@ -9,12 +9,15 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
  * @author estudiante
  */
 public class Persona {
+
     private String nombre;
     private String apellidos;
     private String fecha_nacimiento;
@@ -101,21 +104,23 @@ public class Persona {
     public void setCelular(String celular) {
         this.celular = celular;
     }
-    
-public int getEdad(){
- DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-LocalDate fechaNac = LocalDate.parse(this.fecha_nacimiento, fmt);
-LocalDate ahora = LocalDate.now();
 
-Period periodo = Period.between(fechaNac, ahora);
+    public int getEdad() {
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate fechaNac = LocalDate.parse(this.fecha_nacimiento, fmt);
+        LocalDate ahora = LocalDate.now();
+
+        Period periodo = Period.between(fechaNac, ahora);
 
         return periodo.getYears();
-}
-public boolean validateEmail(){
-    return true;
-    
-}
-    public String getFullname(){
-        return this.nombre+" "+this.apellidos;
+    }
+
+    public boolean validateEmail(String email) {
+
+        return true;
+    }
+
+    public String getFullname() {
+        return this.nombre + " " + this.apellidos;
     }
 }
